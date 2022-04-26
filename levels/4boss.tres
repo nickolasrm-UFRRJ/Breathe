@@ -1,0 +1,40 @@
+{
+  "path": [
+    [
+      192,
+      128
+    ],
+    [
+      224,
+      128
+    ],
+    [
+      256,
+      128
+    ],
+    [
+      288,
+      128
+    ],
+    [
+      320,
+      128
+    ],
+    [
+      352,
+      128
+    ]
+  ],
+  "blocks": [],
+  "events": [{
+    "type": "enemy",
+    "enemy": "boss",
+    "delay": 0
+  }],
+  "stats": {
+    "lives": 1,
+    "coins": 1000
+  },
+  "name": "The Gunner's Dream",
+  "difficulty": 0
+}

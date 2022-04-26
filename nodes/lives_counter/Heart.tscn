@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/regular_polygon2d_node/RegularPolygon2D.gd" type="Script" id=1]
+[ext_resource path="res://nodes/lives_counter/Heart.gd" type="Script" id=2]
+
+[node name="Heart" type="Control"]
+rect_min_size = Vector2( 12, 12 )
+script = ExtResource( 2 )
+
+[node name="Repr" type="Node2D" parent="."]
+script = ExtResource( 1 )
+size = 12.0
+polygon_color = Color( 1, 0, 0, 1 )

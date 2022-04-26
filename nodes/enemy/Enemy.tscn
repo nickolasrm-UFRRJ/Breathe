@@ -1,0 +1,72 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://addons/regular_polygon2d_node/RegularPolygon2D.gd" type="Script" id=1]
+[ext_resource path="res://nodes/enemy/Repr.gd" type="Script" id=2]
+[ext_resource path="res://nodes/enemy/Enemy.gd" type="Script" id=3]
+[ext_resource path="res://nodes/enemy/Physics.gd" type="Script" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 13, 13 )
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Physics/Repr:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "hurt"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Physics/Repr:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1e-05, 1e-05, 1e-05, 1e-05, 1e-05 ),
+"update": 1,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="Enemy" type="PathFollow2D"]
+z_index = 1
+loop = false
+script = ExtResource( 3 )
+size = 12
+
+[node name="Physics" type="Area2D" parent="." groups=["Enemy"]]
+collision_mask = 0
+script = ExtResource( 4 )
+
+[node name="Collision" type="CollisionShape2D" parent="Physics"]
+shape = SubResource( 1 )
+
+[node name="Repr" type="Node2D" parent="Physics"]
+script = ExtResource( 2 )
+color = Color( 1, 1, 1, 1 )
+size = 12
+
+[node name="Body" type="Node2D" parent="Physics/Repr"]
+script = ExtResource( 1 )
+centered = true
+size = 12
+polygon_color = Color( 0.4, 0.4, 0.4, 1 )
+border_size = 6
+border_color = Color( 1, 1, 1, 1 )
+
+[node name="Animation" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 2 )
+anims/hurt = SubResource( 3 )
+
+[connection signal="area_entered" from="Physics" to="." method="_on_Physics_area_entered"]

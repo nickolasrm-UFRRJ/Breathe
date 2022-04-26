@@ -1,0 +1,344 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://scenes/editor/Sidebar.gd" type="Script" id=1]
+[ext_resource path="res://scenes/editor/map/Map.gd" type="Script" id=2]
+[ext_resource path="res://scenes/editor/map/MapSidebar.gd" type="Script" id=3]
+[ext_resource path="res://nodes/screen_camera/ScreenCamera.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/editor/map/sidebar_toggles.tres" type="ButtonGroup" id=5]
+[ext_resource path="res://scenes/editor/events/Events.gd" type="Script" id=6]
+[ext_resource path="res://scenes/editor/sidebar.tres" type="ButtonGroup" id=7]
+[ext_resource path="res://scenes/editor/Editor.gd" type="Script" id=8]
+[ext_resource path="res://scenes/editor/Theme.tres" type="Theme" id=9]
+
+[sub_resource type="Image" id=15]
+data = {
+"data": PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 221, 221, 221, 0, 221, 221, 221, 60, 223, 223, 223, 201, 223, 223, 223, 201, 221, 221, 221, 60, 221, 221, 221, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 222, 222, 222, 0, 222, 222, 222, 199, 224, 224, 224, 255, 224, 224, 224, 255, 222, 222, 222, 199, 222, 222, 222, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 223, 223, 223, 0, 223, 223, 223, 200, 224, 224, 224, 255, 224, 224, 224, 255, 223, 223, 223, 200, 223, 223, 223, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 221, 221, 221, 0, 221, 221, 221, 60, 223, 223, 223, 202, 223, 223, 223, 201, 221, 221, 221, 60, 221, 221, 221, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 221, 221, 221, 0, 223, 223, 223, 0, 223, 223, 223, 0, 221, 221, 221, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 221, 221, 221, 0, 223, 223, 223, 0, 223, 223, 223, 0, 221, 221, 221, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 221, 221, 221, 0, 221, 221, 221, 60, 223, 223, 223, 201, 223, 223, 223, 201, 221, 221, 221, 60, 221, 221, 221, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 222, 222, 222, 0, 222, 222, 222, 199, 224, 224, 224, 255, 224, 224, 224, 255, 222, 222, 222, 199, 222, 222, 222, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 223, 223, 223, 0, 223, 223, 223, 200, 224, 224, 224, 255, 224, 224, 224, 255, 223, 223, 223, 200, 223, 223, 223, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 221, 221, 221, 0, 221, 221, 221, 60, 223, 223, 223, 202, 223, 223, 223, 201, 221, 221, 221, 60, 221, 221, 221, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 221, 221, 221, 0, 223, 223, 223, 0, 223, 223, 223, 0, 221, 221, 221, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 221, 221, 221, 0, 223, 223, 223, 0, 223, 223, 223, 0, 221, 221, 221, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 221, 221, 221, 0, 221, 221, 221, 60, 223, 223, 223, 201, 223, 223, 223, 201, 221, 221, 221, 60, 221, 221, 221, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 222, 222, 222, 0, 222, 222, 222, 199, 224, 224, 224, 255, 224, 224, 224, 255, 222, 222, 222, 199, 222, 222, 222, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 223, 223, 223, 0, 223, 223, 223, 200, 224, 224, 224, 255, 224, 224, 224, 255, 223, 223, 223, 200, 223, 223, 223, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 221, 221, 221, 0, 221, 221, 221, 60, 223, 223, 223, 202, 223, 223, 223, 201, 221, 221, 221, 60, 221, 221, 221, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ),
+"format": "RGBA8",
+"height": 16,
+"mipmaps": false,
+"width": 16
+}
+
+[sub_resource type="ImageTexture" id=2]
+flags = 0
+flags = 0
+image = SubResource( 15 )
+size = Vector2( 16, 16 )
+
+[sub_resource type="Image" id=16]
+data = {
+"data": PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 0, 224, 224, 224, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 0, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 0, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 0, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 0, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 0, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 0, 0, 0, 0, 224, 224, 224, 0, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 0, 0, 0, 0, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 0, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 0, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 0, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 0, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 0, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 0, 224, 224, 224, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ),
+"format": "RGBA8",
+"height": 16,
+"mipmaps": false,
+"width": 16
+}
+
+[sub_resource type="ImageTexture" id=10]
+flags = 0
+flags = 0
+image = SubResource( 16 )
+size = Vector2( 16, 16 )
+
+[sub_resource type="Image" id=17]
+data = {
+"data": PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 223, 223, 223, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 223, 223, 223, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 223, 223, 223, 0, 223, 223, 223, 196, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 223, 223, 223, 196, 223, 223, 223, 0, 0, 0, 0, 0, 0, 0, 0, 0, 222, 222, 222, 0, 222, 222, 222, 215, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 222, 222, 222, 215, 222, 222, 222, 0, 0, 0, 0, 0, 0, 0, 0, 0, 222, 222, 222, 0, 222, 222, 222, 140, 224, 224, 224, 255, 222, 222, 222, 215, 204, 204, 204, 5, 214, 214, 214, 0, 224, 224, 224, 0, 224, 224, 224, 0, 214, 214, 214, 0, 204, 204, 204, 5, 223, 223, 223, 216, 224, 224, 224, 255, 222, 222, 222, 140, 222, 222, 222, 0, 0, 0, 0, 0, 0, 0, 0, 0, 215, 215, 215, 0, 215, 215, 215, 26, 223, 223, 223, 233, 224, 224, 224, 255, 222, 222, 222, 127, 222, 222, 222, 0, 0, 0, 0, 0, 0, 0, 0, 0, 222, 222, 222, 0, 222, 222, 222, 127, 224, 224, 224, 255, 223, 223, 223, 233, 214, 214, 214, 25, 214, 214, 214, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 219, 219, 219, 0, 223, 223, 223, 65, 223, 223, 223, 251, 223, 223, 223, 253, 223, 223, 223, 72, 219, 219, 219, 0, 219, 219, 219, 0, 223, 223, 223, 72, 223, 223, 223, 253, 223, 223, 223, 251, 223, 223, 223, 65, 218, 218, 218, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 223, 223, 223, 0, 223, 223, 223, 114, 224, 224, 224, 255, 223, 223, 223, 237, 216, 216, 216, 33, 216, 216, 216, 33, 223, 223, 223, 237, 224, 224, 224, 255, 223, 223, 223, 113, 223, 223, 223, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 222, 222, 222, 0, 222, 222, 222, 165, 224, 224, 224, 255, 223, 223, 223, 201, 223, 223, 223, 201, 224, 224, 224, 255, 223, 223, 223, 164, 223, 223, 223, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 222, 222, 222, 0, 223, 223, 223, 164, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 223, 223, 223, 164, 222, 222, 222, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 222, 222, 222, 0, 222, 222, 222, 111, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 222, 222, 222, 110, 222, 222, 222, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 223, 223, 223, 0, 223, 223, 223, 64, 223, 223, 223, 251, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 223, 223, 223, 251, 223, 223, 223, 64, 223, 223, 223, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 223, 223, 223, 0, 223, 223, 223, 24, 223, 223, 223, 232, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 223, 223, 223, 232, 223, 223, 223, 24, 223, 223, 223, 0, 0, 0, 0, 0, 0, 0, 0, 0, 222, 222, 222, 0, 222, 222, 222, 140, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 222, 222, 222, 140, 222, 222, 222, 0, 0, 0, 0, 0, 0, 0, 0, 0, 222, 222, 222, 0, 222, 222, 222, 215, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 222, 222, 222, 215, 222, 222, 222, 0, 0, 0, 0, 0, 0, 0, 0, 0, 223, 223, 223, 0, 223, 223, 223, 197, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 223, 223, 223, 196, 223, 223, 223, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 223, 223, 223, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 224, 224, 224, 0, 223, 223, 223, 0, 0, 0, 0, 0, 0, 0, 0, 0 ),
+"format": "RGBA8",
+"height": 16,
+"mipmaps": false,
+"width": 16
+}
+
+[sub_resource type="ImageTexture" id=14]
+flags = 0
+flags = 0
+image = SubResource( 17 )
+size = Vector2( 16, 16 )
+
+[node name="Editor" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 9 )
+script = ExtResource( 8 )
+
+[node name="Fixed" type="CanvasLayer" parent="."]
+
+[node name="Sidebar" type="HBoxContainer" parent="Fixed"]
+anchor_bottom = 1.0
+margin_left = 3.0
+margin_right = 108.0
+mouse_filter = 2
+size_flags_horizontal = 0
+theme = ExtResource( 9 )
+script = ExtResource( 1 )
+screen_camera_path = NodePath("../../ScreenCamera")
+toggled = true
+
+[node name="ButtonsList" type="CenterContainer" parent="Fixed/Sidebar"]
+margin_right = 46.0
+margin_bottom = 324.0
+
+[node name="Buttons" type="VBoxContainer" parent="Fixed/Sidebar/ButtonsList"]
+margin_top = 120.0
+margin_right = 46.0
+margin_bottom = 204.0
+
+[node name="Map" type="Button" parent="Fixed/Sidebar/ButtonsList/Buttons"]
+margin_right = 46.0
+margin_bottom = 18.0
+theme = ExtResource( 9 )
+toggle_mode = true
+pressed = true
+group = ExtResource( 7 )
+text = "Map"
+
+[node name="Events" type="Button" parent="Fixed/Sidebar/ButtonsList/Buttons"]
+margin_top = 22.0
+margin_right = 46.0
+margin_bottom = 40.0
+toggle_mode = true
+group = ExtResource( 7 )
+text = "Events"
+
+[node name="Save" type="Button" parent="Fixed/Sidebar/ButtonsList/Buttons"]
+margin_top = 44.0
+margin_right = 46.0
+margin_bottom = 62.0
+text = "Save"
+
+[node name="Menu" type="Button" parent="Fixed/Sidebar/ButtonsList/Buttons"]
+margin_top = 66.0
+margin_right = 46.0
+margin_bottom = 84.0
+text = "Menu"
+
+[node name="Toggle" type="CenterContainer" parent="Fixed/Sidebar"]
+margin_left = 50.0
+margin_right = 70.0
+margin_bottom = 324.0
+mouse_filter = 2
+
+[node name="Toggle" type="Button" parent="Fixed/Sidebar/Toggle"]
+margin_top = 152.0
+margin_right = 20.0
+margin_bottom = 172.0
+size_flags_vertical = 0
+icon = SubResource( 2 )
+
+[node name="SavePopup" type="ConfirmationDialog" parent="Fixed"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -48.0
+margin_right = 100.0
+margin_bottom = 48.0
+window_title = "Save"
+
+[node name="Container" type="VBoxContainer" parent="Fixed/SavePopup"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -36.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LevelName" type="LineEdit" parent="Fixed/SavePopup/Container"]
+margin_right = 184.0
+margin_bottom = 24.0
+text = "Level name"
+
+[node name="Difficulty" type="SpinBox" parent="Fixed/SavePopup/Container"]
+margin_top = 28.0
+margin_right = 184.0
+margin_bottom = 52.0
+max_value = 2.0
+prefix = "Difficulty"
+
+[node name="SaveErrorPopup" type="AcceptDialog" parent="Fixed"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -103.5
+margin_top = -58.0
+margin_right = 103.5
+margin_bottom = 58.0
+
+[node name="ErrorMessage" type="Label" parent="Fixed/SaveErrorPopup"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -36.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+autowrap = true
+
+[node name="ScreenCamera" parent="." instance=ExtResource( 4 )]
+
+[node name="Map" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="Canvas" type="Panel" parent="Map"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="DrawerSidebar" type="HBoxContainer" parent="Map"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -70.0
+margin_right = -2.99988
+mouse_filter = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+alignment = 2
+script = ExtResource( 3 )
+
+[node name="Toggle" type="CenterContainer" parent="Map/DrawerSidebar"]
+margin_right = 20.0
+margin_bottom = 324.0
+mouse_filter = 2
+
+[node name="Toggle" type="Button" parent="Map/DrawerSidebar/Toggle"]
+margin_top = 152.0
+margin_right = 20.0
+margin_bottom = 172.0
+size_flags_vertical = 0
+icon = SubResource( 2 )
+
+[node name="ButtonsList" type="CenterContainer" parent="Map/DrawerSidebar"]
+margin_left = 24.0
+margin_right = 67.0
+margin_bottom = 324.0
+
+[node name="Buttons" type="VBoxContainer" parent="Map/DrawerSidebar/ButtonsList"]
+margin_top = 109.0
+margin_right = 43.0
+margin_bottom = 215.0
+theme = ExtResource( 9 )
+
+[node name="Path" type="Button" parent="Map/DrawerSidebar/ButtonsList/Buttons"]
+margin_right = 43.0
+margin_bottom = 18.0
+toggle_mode = true
+group = ExtResource( 5 )
+text = "Path"
+
+[node name="Start" type="Button" parent="Map/DrawerSidebar/ButtonsList/Buttons"]
+margin_top = 22.0
+margin_right = 43.0
+margin_bottom = 40.0
+toggle_mode = true
+group = ExtResource( 5 )
+text = "Start"
+
+[node name="End" type="Button" parent="Map/DrawerSidebar/ButtonsList/Buttons"]
+margin_top = 44.0
+margin_right = 43.0
+margin_bottom = 62.0
+toggle_mode = true
+group = ExtResource( 5 )
+text = "End"
+
+[node name="Block" type="Button" parent="Map/DrawerSidebar/ButtonsList/Buttons"]
+margin_top = 66.0
+margin_right = 43.0
+margin_bottom = 84.0
+toggle_mode = true
+group = ExtResource( 5 )
+text = "Block"
+
+[node name="Eraser" type="Button" parent="Map/DrawerSidebar/ButtonsList/Buttons"]
+margin_top = 88.0
+margin_right = 43.0
+margin_bottom = 106.0
+toggle_mode = true
+group = ExtResource( 5 )
+text = "Eraser"
+
+[node name="Events" type="Control" parent="."]
+anchor_left = 1.0
+anchor_right = 2.0
+anchor_bottom = 1.0
+margin_left = 3.0
+margin_right = -3.0
+margin_bottom = -3.0
+script = ExtResource( 6 )
+
+[node name="Container" type="VBoxContainer" parent="Events"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Waves" type="ScrollContainer" parent="Events/Container"]
+margin_right = 570.0
+margin_bottom = 297.0
+size_flags_vertical = 3
+
+[node name="Scrollable" type="VBoxContainer" parent="Events/Container/Waves"]
+margin_right = 570.0
+margin_bottom = 297.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Stats" type="HBoxContainer" parent="Events/Container"]
+margin_top = 301.0
+margin_right = 570.0
+margin_bottom = 321.0
+
+[node name="Lives" type="SpinBox" parent="Events/Container/Stats"]
+margin_right = 220.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+min_value = 1.0
+value = 3.0
+suffix = "initial lives"
+
+[node name="Coins" type="SpinBox" parent="Events/Container/Stats"]
+margin_left = 224.0
+margin_right = 444.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+min_value = 50.0
+max_value = 1000.0
+step = 25.0
+value = 50.0
+suffix = "initial coins"
+
+[node name="Enemy" type="Button" parent="Events/Container/Stats"]
+margin_left = 448.0
+margin_right = 513.0
+margin_bottom = 20.0
+text = "Enemy"
+icon = SubResource( 10 )
+
+[node name="Shop" type="Button" parent="Events/Container/Stats"]
+margin_left = 517.0
+margin_right = 570.0
+margin_bottom = 20.0
+text = "Shop"
+icon = SubResource( 14 )
+
+[connection signal="pressed" from="Fixed/Sidebar/ButtonsList/Buttons/Map" to="Fixed/Sidebar" method="_on_Drawer_pressed"]
+[connection signal="pressed" from="Fixed/Sidebar/ButtonsList/Buttons/Events" to="Fixed/Sidebar" method="_on_Inventory_pressed"]
+[connection signal="pressed" from="Fixed/Sidebar/ButtonsList/Buttons/Save" to="." method="_on_Save_pressed"]
+[connection signal="pressed" from="Fixed/Sidebar/ButtonsList/Buttons/Menu" to="Fixed/Sidebar" method="_on_Menu_pressed"]
+[connection signal="pressed" from="Fixed/Sidebar/Toggle/Toggle" to="Fixed/Sidebar" method="_on_Toggle_pressed"]
+[connection signal="toggled" from="Fixed/Sidebar/Toggle/Toggle" to="Fixed/Sidebar" method="_on_Toggle_toggled"]
+[connection signal="confirmed" from="Fixed/SavePopup" to="." method="_on_SavePopup_confirmed"]
+[connection signal="gui_input" from="Map/Canvas" to="Map" method="_on_Canvas_gui_input"]
+[connection signal="pressed" from="Map/DrawerSidebar/Toggle/Toggle" to="Map/DrawerSidebar" method="_on_Toggle_pressed"]
+[connection signal="button_up" from="Map/DrawerSidebar/ButtonsList/Buttons/Path" to="Map" method="_on_Path_button_up"]
+[connection signal="button_up" from="Map/DrawerSidebar/ButtonsList/Buttons/Start" to="Map" method="_on_Start_button_up"]
+[connection signal="button_up" from="Map/DrawerSidebar/ButtonsList/Buttons/End" to="Map" method="_on_End_button_up"]
+[connection signal="button_up" from="Map/DrawerSidebar/ButtonsList/Buttons/Block" to="Map" method="_on_Block_button_up"]
+[connection signal="button_up" from="Map/DrawerSidebar/ButtonsList/Buttons/Eraser" to="Map" method="_on_Eraser_button_up"]
+[connection signal="pressed" from="Events/Container/Stats/Enemy" to="Events" method="_on_Button_pressed"]
+[connection signal="pressed" from="Events/Container/Stats/Shop" to="Events" method="_on_Shop_pressed"]

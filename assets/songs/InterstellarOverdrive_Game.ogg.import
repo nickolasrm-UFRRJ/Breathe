@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/InterstellarOverdrive_Game.ogg-f2f1b1cbb483389d7b6a3098af027def.oggstr"
+
+[deps]
+
+source_file="res://assets/songs/InterstellarOverdrive_Game.ogg"
+dest_files=[ "res://.import/InterstellarOverdrive_Game.ogg-f2f1b1cbb483389d7b6a3098af027def.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

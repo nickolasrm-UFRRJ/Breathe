@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Money_Shop.ogg-5f76ccf3236dbf742da06ce8677d7983.oggstr"
+
+[deps]
+
+source_file="res://assets/songs/Money_Shop.ogg"
+dest_files=[ "res://.import/Money_Shop.ogg-5f76ccf3236dbf742da06ce8677d7983.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

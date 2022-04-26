@@ -1,0 +1,126 @@
+{
+  "path": [
+    [
+      160,
+      128
+    ],
+    [
+      192,
+      128
+    ],
+    [
+      224,
+      128
+    ],
+    [
+      256,
+      128
+    ],
+    [
+      288,
+      128
+    ],
+    [
+      320,
+      128
+    ],
+    [
+      352,
+      128
+    ],
+    [
+      384,
+      128
+    ]
+  ],
+  "blocks": [],
+  "events": [
+    {
+      "type": "enemy",
+      "enemy": "Regular",
+      "delay": 1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Regular",
+      "delay": 1
+    },
+    {
+      "type": "shop"
+    },
+    {
+      "type": "enemy",
+      "enemy": "Regular",
+      "delay": 0.5
+    },
+    {
+      "type": "enemy",
+      "enemy": "Regular",
+      "delay": 0.5
+    },
+    {
+      "type": "enemy",
+      "enemy": "Regular",
+      "delay": 0.5
+    },
+    {
+      "type": "enemy",
+      "enemy": "Regular",
+      "delay": 3
+    },
+    {
+      "type": "enemy",
+      "enemy": "Regular",
+      "delay": 0.3
+    },
+    {
+      "type": "enemy",
+      "enemy": "Regular",
+      "delay": 0.3
+    },
+    {
+      "type": "enemy",
+      "enemy": "Regular",
+      "delay": 0.3
+    },
+    {
+      "type": "shop"
+    },
+    {
+      "type": "enemy",
+      "enemy": "Regular",
+      "delay": 0.3
+    },
+    {
+      "type": "enemy",
+      "enemy": "Regular",
+      "delay": 0.3
+    },
+    {
+      "type": "enemy",
+      "enemy": "Regular",
+      "delay": 0.3
+    },
+    {
+      "type": "enemy",
+      "enemy": "Regular",
+      "delay": 0.3
+    },
+    {
+      "type": "enemy",
+      "enemy": "Regular",
+      "delay": 0.3
+    },
+    {
+      "type": "enemy",
+      "enemy": "Regular",
+      "delay": 0.3
+    }
+  ],
+  "stats": {
+    "lives": 3,
+    "coins": 100
+  },
+  "name": "Welcome",
+  "difficulty": 0
+}

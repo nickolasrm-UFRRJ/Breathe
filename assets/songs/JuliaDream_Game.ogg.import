@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/JuliaDream_Game.ogg-9b6da67f033abca7ea557f460e110895.oggstr"
+
+[deps]
+
+source_file="res://assets/songs/JuliaDream_Game.ogg"
+dest_files=[ "res://.import/JuliaDream_Game.ogg-9b6da67f033abca7ea557f460e110895.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

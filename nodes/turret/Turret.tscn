@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://addons/regular_polygon2d_node/RegularPolygon2D.gd" type="Script" id=1]
+[ext_resource path="res://nodes/turret/Turret.gd" type="Script" id=2]
+[ext_resource path="res://nodes/turret/Repr.gd" type="Script" id=3]
+[ext_resource path="res://nodes/circle/Circle.tscn" type="PackedScene" id=4]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 128.0
+
+[node name="Turret" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Repr" type="Node2D" parent="."]
+position = Vector2( 16, 16 )
+script = ExtResource( 3 )
+color = Color( 1, 0, 0, 1 )
+
+[node name="Gun" type="Node2D" parent="Repr"]
+z_index = 2
+script = ExtResource( 1 )
+centered = true
+size = 6.4
+polygon_color = Color( 0.4, 0, 0, 1 )
+border_size = 5.92
+border_color = Color( 1, 0, 0, 1 )
+polygon_rotation = 90.0
+
+[node name="Base" type="Node2D" parent="Repr"]
+z_index = 1
+script = ExtResource( 1 )
+centered = true
+num_sides = 8
+size = 26.0
+polygon_color = Color( 0.4, 0, 0, 1 )
+border_size = 5.92
+border_color = Color( 1, 0, 0, 1 )
+polygon_rotation = 22.5
+
+[node name="Circle" parent="Repr" instance=ExtResource( 4 )]
+visible = false
+color = Color( 0.4, 0, 0, 0.4 )
+centered = true
+radius = 128
+
+[node name="FireTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="Range" type="Area2D" parent="." groups=["Turret"]]
+position = Vector2( 16, 16 )
+
+[node name="Collision" type="CollisionShape2D" parent="Range"]
+shape = SubResource( 1 )
+
+[connection signal="timeout" from="FireTimer" to="." method="_on_FireTimer_timeout"]
+[connection signal="area_entered" from="Range" to="." method="_on_Range_area_entered"]
+[connection signal="area_exited" from="Range" to="." method="_on_Range_area_exited"]

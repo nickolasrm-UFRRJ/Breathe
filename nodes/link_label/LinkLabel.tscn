@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://nodes/link_label/LinkLabel.gd" type="Script" id=1]
+
+[node name="LinkLabel" type="LinkButton"]
+margin_bottom = 14.0
+focus_mode = 2
+mouse_default_cursor_shape = 0
+script = ExtResource( 1 )
+
+[connection signal="pressed" from="." to="." method="_on_Credits_pressed"]

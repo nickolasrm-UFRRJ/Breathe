@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/LuciferSam_Game.ogg-23af3e2da71e125f0ae7c4c40a061f5d.oggstr"
+
+[deps]
+
+source_file="res://assets/songs/LuciferSam_Game.ogg"
+dest_files=[ "res://.import/LuciferSam_Game.ogg-23af3e2da71e125f0ae7c4c40a061f5d.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://nodes/lives_counter/LivesCounter.gd" type="Script" id=2]
+
+[node name="Lives" type="HBoxContainer"]
+script = ExtResource( 2 )

@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://nodes/explosion/Explosion.gd" type="Script" id=1]
+
+[sub_resource type="Curve" id=7]
+_data = [ Vector2( 0, 1 ), 0.0, -0.163746, 0, 0, Vector2( 1, 0 ), -0.150116, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=6]
+curve = SubResource( 7 )
+
+[sub_resource type="ParticlesMaterial" id=8]
+flag_disable_z = true
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 50.0
+initial_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 32.0
+scale_random = 0.5
+scale_curve = SubResource( 6 )
+
+[node name="Explosion" type="Node2D"]
+modulate = Color( 1, 0, 0, 1 )
+script = ExtResource( 1 )
+color = Color( 1, 0, 0, 1 )
+
+[node name="Particle" type="Particles2D" parent="."]
+emitting = false
+amount = 16
+lifetime = 4.5
+one_shot = true
+speed_scale = 15.0
+explosiveness = 1.0
+process_material = SubResource( 8 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

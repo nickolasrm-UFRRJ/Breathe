@@ -1,0 +1,917 @@
+{
+  "path": [
+    [
+      192,
+      96
+    ],
+    [
+      224,
+      96
+    ],
+    [
+      256,
+      96
+    ],
+    [
+      288,
+      96
+    ],
+    [
+      320,
+      96
+    ],
+    [
+      352,
+      96
+    ],
+    [
+      384,
+      96
+    ],
+    [
+      384,
+      128
+    ],
+    [
+      384,
+      160
+    ],
+    [
+      352,
+      160
+    ],
+    [
+      320,
+      160
+    ],
+    [
+      288,
+      160
+    ],
+    [
+      256,
+      160
+    ],
+    [
+      224,
+      160
+    ],
+    [
+      192,
+      160
+    ]
+  ],
+  "blocks": [],
+  "events": [
+    {
+      "type": "enemy",
+      "enemy": "Regular",
+      "delay": 1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Regular",
+      "delay": 1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Regular",
+      "delay": 0.5
+    },
+    {
+      "type": "shop"
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.2
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.2
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.2
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.2
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.2
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.2
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.2
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.2
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.2
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.2
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.2
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.2
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.2
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.2
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.2
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.2
+    },
+    {
+      "type": "shop"
+    },
+    {
+      "type": "enemy",
+      "enemy": "Regular",
+      "delay": 0.5
+    },
+    {
+      "type": "enemy",
+      "enemy": "Regular",
+      "delay": 0.5
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.2
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.2
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.2
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.2
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.2
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.2
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.2
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.2
+    },
+    {
+      "type": "enemy",
+      "enemy": "Regular",
+      "delay": 0.5
+    },
+    {
+      "type": "enemy",
+      "enemy": "Regular",
+      "delay": 0.5
+    },
+    {
+      "type": "enemy",
+      "enemy": "Regular",
+      "delay": 0.5
+    },
+    {
+      "type": "enemy",
+      "enemy": "Regular",
+      "delay": 0.5
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.2
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.2
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.2
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.2
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.2
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.2
+    },
+    {
+      "type": "shop"
+    },
+        {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.1
+    }
+  ],
+  "stats": {
+    "lives": 3,
+    "coins": 100
+  },
+  "name": "On The Run",
+  "difficulty": 1
+}

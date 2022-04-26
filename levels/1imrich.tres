@@ -1,0 +1,424 @@
+{
+  "path": [
+    [
+      192,
+      224
+    ],
+    [
+      224,
+      224
+    ],
+    [
+      256,
+      224
+    ],
+    [
+      288,
+      224
+    ],
+    [
+      320,
+      224
+    ],
+    [
+      352,
+      224
+    ],
+    [
+      384,
+      224
+    ],
+    [
+      384,
+      192
+    ],
+    [
+      384,
+      160
+    ],
+    [
+      384,
+      128
+    ],
+    [
+      384,
+      96
+    ],
+    [
+      384,
+      64
+    ],
+    [
+      384,
+      32
+    ],
+    [
+      352,
+      32
+    ],
+    [
+      320,
+      32
+    ],
+    [
+      288,
+      32
+    ],
+    [
+      256,
+      32
+    ],
+    [
+      224,
+      32
+    ],
+    [
+      192,
+      32
+    ],
+    [
+      192,
+      64
+    ],
+    [
+      192,
+      96
+    ],
+    [
+      192,
+      128
+    ],
+    [
+      192,
+      160
+    ],
+    [
+      224,
+      160
+    ],
+    [
+      256,
+      160
+    ],
+    [
+      288,
+      160
+    ],
+    [
+      320,
+      160
+    ],
+    [
+      320,
+      128
+    ],
+    [
+      320,
+      96
+    ],
+    [
+      288,
+      96
+    ],
+    [
+      256,
+      96
+    ]
+  ],
+  "blocks": [
+    [
+      288,
+      128
+    ],
+    [
+      224,
+      128
+    ],
+    [
+      224,
+      64
+    ],
+    [
+      288,
+      64
+    ],
+    [
+      352,
+      64
+    ],
+    [
+      352,
+      128
+    ],
+    [
+      352,
+      192
+    ],
+    [
+      288,
+      192
+    ],
+    [
+      224,
+      192
+    ],
+    [
+      256,
+      256
+    ],
+    [
+      320,
+      256
+    ],
+    [
+      384,
+      256
+    ],
+    [
+      416,
+      224
+    ],
+    [
+      416,
+      160
+    ],
+    [
+      416,
+      96
+    ],
+    [
+      416,
+      32
+    ],
+    [
+      384,
+      0
+    ],
+    [
+      320,
+      0
+    ],
+    [
+      256,
+      0
+    ],
+    [
+      192,
+      0
+    ],
+    [
+      160,
+      32
+    ],
+    [
+      160,
+      96
+    ],
+    [
+      160,
+      160
+    ],
+    [
+      192,
+      256
+    ],
+    [
+      160,
+      224
+    ]
+  ],
+  "events": [
+    {
+      "type": "enemy",
+      "enemy": "Tank",
+      "delay": 0.6
+    },
+    {
+      "type": "enemy",
+      "enemy": "Tank",
+      "delay": 0.6
+    },
+    {
+      "type": "enemy",
+      "enemy": "Tank",
+      "delay": 0.6
+    },
+    {
+      "type": "enemy",
+      "enemy": "Tank",
+      "delay": 0.6
+    },
+    {
+      "type": "enemy",
+      "enemy": "Tank",
+      "delay": 0.6
+    },
+    {
+      "type": "enemy",
+      "enemy": "Tank",
+      "delay": 0.6
+    },
+    {
+      "type": "shop"
+    },
+    {
+      "type": "enemy",
+      "enemy": "Regular",
+      "delay": 0.5
+    },
+    {
+      "type": "enemy",
+      "enemy": "Regular",
+      "delay": 0.5
+    },
+    {
+      "type": "enemy",
+      "enemy": "Regular",
+      "delay": 0.5
+    },
+    {
+      "type": "enemy",
+      "enemy": "Regular",
+      "delay": 0.5
+    },
+    {
+      "type": "enemy",
+      "enemy": "Regular",
+      "delay": 0.5
+    },
+    {
+      "type": "enemy",
+      "enemy": "Regular",
+      "delay": 0.5
+    },
+    {
+      "type": "enemy",
+      "enemy": "Regular",
+      "delay": 0.5
+    },
+    {
+      "type": "enemy",
+      "enemy": "Regular",
+      "delay": 0.5
+    },
+    {
+      "type": "enemy",
+      "enemy": "Regular",
+      "delay": 0.5
+    },
+    {
+      "type": "enemy",
+      "enemy": "Regular",
+      "delay": 0.5
+    },
+    {
+      "type": "enemy",
+      "enemy": "Regular",
+      "delay": 0.5
+    },
+    {
+      "type": "enemy",
+      "enemy": "Regular",
+      "delay": 0.5
+    },
+    {
+      "type": "enemy",
+      "enemy": "Regular",
+      "delay": 0.5
+    },
+    {
+      "type": "shop"
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.3
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.3
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.3
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.3
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.3
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.3
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.3
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.3
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.3
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.3
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.3
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.3
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.3
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.3
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.3
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.3
+    },
+    {
+      "type": "enemy",
+      "enemy": "Fast",
+      "delay": 0.3
+    }
+  ],
+  "stats": {
+    "lives": 3,
+    "coins": 500
+  },
+  "name": "I am rich",
+  "difficulty": 0
+}

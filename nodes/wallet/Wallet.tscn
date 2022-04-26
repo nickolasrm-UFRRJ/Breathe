@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/regular_polygon2d_node/RegularPolygon2D.gd" type="Script" id=1]
+[ext_resource path="res://nodes/wallet/Wallet.gd" type="Script" id=2]
+
+[node name="Wallet" type="HBoxContainer"]
+anchor_left = 1.0
+anchor_right = 1.0
+grow_horizontal = 0
+script = ExtResource( 2 )
+
+[node name="Text" type="Label" parent="."]
+margin_right = 24.0
+margin_bottom = 14.0
+text = "100"
+
+[node name="Coin" type="Control" parent="."]
+margin_left = 28.0
+margin_right = 40.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 12, 12 )
+
+[node name="Repr" type="Node2D" parent="Coin"]
+position = Vector2( 6, 6 )
+script = ExtResource( 1 )
+centered = true
+num_sides = 6
+size = 12.0
+polygon_color = Color( 0.933333, 0.611765, 0, 1 )

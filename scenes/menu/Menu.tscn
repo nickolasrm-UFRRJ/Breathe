@@ -1,0 +1,777 @@
+[gd_scene load_steps=47 format=2]
+
+[ext_resource path="res://assets/songs/Breathe_Menu.ogg" type="AudioStream" id=1]
+[ext_resource path="res://assets/fonts/animals.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/ui_theme.tres" type="Theme" id=3]
+[ext_resource path="res://scenes/menu/MainButtons.gd" type="Script" id=4]
+[ext_resource path="res://scenes/menu/Menu.gd" type="Script" id=5]
+[ext_resource path="res://assets/fonts/traveling_typewriter.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://nodes/sound/Sound.tscn" type="PackedScene" id=7]
+[ext_resource path="res://nodes/link_label/LinkLabel.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/menu/Options.gd" type="Script" id=9]
+[ext_resource path="res://scenes/menu/Sound.gd" type="Script" id=10]
+[ext_resource path="res://scenes/menu/Animation.gd" type="Script" id=11]
+[ext_resource path="res://scenes/menu/LevelSelector.gd" type="Script" id=12]
+[ext_resource path="res://scenes/menu/Main.gd" type="Script" id=13]
+
+[sub_resource type="DynamicFont" id=1]
+size = 64
+extra_spacing_char = 9
+font_data = ExtResource( 2 )
+
+[sub_resource type="Image" id=37]
+data = {
+"data": PoolByteArray( 0, 0, 0, 0, 220, 220, 220, 0, 223, 223, 223, 0, 223, 223, 223, 0, 223, 223, 223, 0, 223, 223, 223, 0, 223, 223, 223, 0, 223, 223, 223, 0, 223, 223, 223, 0, 0, 0, 0, 0, 0, 0, 0, 0, 210, 210, 210, 0, 222, 222, 222, 0, 223, 223, 223, 0, 222, 222, 222, 0, 0, 0, 0, 0, 220, 220, 220, 0, 220, 220, 220, 59, 223, 223, 223, 200, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 0, 215, 215, 215, 0, 210, 210, 210, 17, 222, 222, 222, 166, 223, 223, 223, 227, 222, 222, 222, 85, 222, 222, 222, 0, 222, 222, 222, 0, 222, 222, 222, 198, 221, 221, 221, 69, 222, 222, 222, 0, 223, 223, 223, 0, 223, 223, 223, 0, 223, 223, 223, 0, 223, 223, 223, 0, 223, 223, 223, 0, 218, 218, 218, 0, 221, 221, 221, 15, 223, 223, 223, 203, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 221, 223, 223, 223, 0, 223, 223, 223, 0, 223, 223, 223, 254, 222, 222, 222, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 211, 211, 211, 0, 215, 215, 215, 13, 223, 223, 223, 200, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 171, 223, 223, 223, 0, 223, 223, 223, 0, 223, 223, 223, 254, 223, 223, 223, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 203, 203, 203, 0, 208, 208, 208, 11, 223, 223, 223, 197, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 254, 222, 222, 222, 215, 221, 221, 221, 23, 221, 221, 221, 0, 223, 223, 223, 0, 223, 223, 223, 254, 223, 223, 223, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 210, 210, 210, 0, 198, 198, 198, 9, 223, 223, 223, 194, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 218, 214, 214, 214, 25, 217, 217, 217, 0, 0, 0, 0, 0, 223, 223, 223, 0, 223, 223, 223, 254, 223, 223, 223, 0, 0, 0, 0, 0, 0, 0, 0, 0, 220, 220, 220, 0, 223, 223, 223, 8, 222, 222, 222, 190, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 221, 217, 217, 217, 27, 215, 215, 215, 0, 223, 223, 223, 0, 0, 0, 0, 0, 223, 223, 223, 0, 223, 223, 223, 254, 223, 223, 223, 0, 0, 0, 0, 0, 218, 218, 218, 0, 218, 218, 218, 7, 223, 223, 223, 186, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 224, 219, 219, 219, 29, 218, 218, 218, 0, 223, 223, 223, 0, 223, 223, 223, 254, 223, 223, 223, 0, 223, 223, 223, 0, 223, 223, 223, 254, 223, 223, 223, 0, 221, 221, 221, 0, 220, 220, 220, 0, 221, 221, 221, 108, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 226, 223, 223, 223, 32, 221, 221, 221, 0, 0, 0, 0, 0, 223, 223, 223, 0, 223, 223, 223, 254, 223, 223, 223, 0, 0, 0, 0, 0, 223, 223, 223, 0, 222, 222, 222, 0, 221, 221, 221, 46, 220, 220, 220, 51, 221, 221, 221, 0, 222, 222, 222, 158, 223, 223, 223, 254, 223, 223, 223, 228, 218, 218, 218, 35, 220, 220, 220, 0, 0, 0, 0, 0, 0, 0, 0, 0, 223, 223, 223, 0, 223, 223, 223, 254, 223, 223, 223, 0, 0, 0, 0, 0, 223, 223, 223, 0, 223, 223, 223, 57, 223, 223, 223, 254, 223, 223, 223, 254, 222, 222, 222, 142, 0, 0, 0, 1, 222, 222, 222, 143, 221, 221, 221, 38, 219, 219, 219, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 223, 223, 223, 0, 223, 223, 223, 254, 223, 223, 223, 0, 0, 0, 0, 0, 223, 223, 223, 0, 223, 223, 223, 163, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 252, 222, 222, 222, 31, 222, 222, 222, 0, 221, 221, 221, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 223, 223, 223, 0, 223, 223, 223, 254, 223, 223, 223, 0, 223, 223, 223, 0, 223, 223, 223, 189, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 254, 221, 221, 221, 46, 221, 221, 221, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 222, 222, 222, 0, 223, 223, 223, 254, 223, 223, 223, 0, 221, 221, 221, 0, 221, 221, 221, 54, 222, 222, 222, 247, 223, 223, 223, 254, 223, 223, 223, 254, 222, 222, 222, 181, 221, 221, 221, 0, 223, 223, 223, 0, 223, 223, 223, 0, 223, 223, 223, 0, 223, 223, 223, 0, 223, 223, 223, 0, 222, 222, 222, 0, 221, 221, 221, 69, 222, 222, 222, 199, 222, 222, 222, 0, 0, 0, 0, 0, 221, 221, 221, 0, 221, 221, 221, 38, 222, 222, 222, 101, 221, 221, 221, 60, 221, 221, 221, 0, 223, 223, 223, 0, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 254, 223, 223, 223, 200, 220, 220, 220, 59, 220, 220, 220, 0, 0, 0, 0, 0, 0, 0, 0, 0, 221, 221, 221, 0, 222, 222, 222, 0, 221, 221, 221, 0, 0, 0, 0, 0, 0, 0, 0, 0, 223, 223, 223, 0, 223, 223, 223, 0, 223, 223, 223, 0, 223, 223, 223, 0, 223, 223, 223, 0, 223, 223, 223, 0, 223, 223, 223, 0, 220, 220, 220, 0, 0, 0, 0, 0 ),
+"format": "RGBA8",
+"height": 16,
+"mipmaps": false,
+"width": 16
+}
+
+[sub_resource type="ImageTexture" id=36]
+flags = 0
+lossy_quality = 0.69
+flags = 0
+image = SubResource( 37 )
+size = Vector2( 16, 16 )
+
+[sub_resource type="DynamicFont" id=20]
+size = 24
+font_data = ExtResource( 6 )
+
+[sub_resource type="AnimationNodeAnimation" id=10]
+animation = "Idle"
+
+[sub_resource type="AnimationNodeAnimation" id=30]
+animation = "MoveCreditsToMain"
+
+[sub_resource type="AnimationNodeAnimation" id=23]
+animation = "MoveLevelsToMain"
+
+[sub_resource type="AnimationNodeAnimation" id=31]
+animation = "MoveMainToCredits"
+
+[sub_resource type="AnimationNodeAnimation" id=24]
+animation = "MoveMainToLevels"
+
+[sub_resource type="AnimationNodeAnimation" id=15]
+animation = "MoveMainToOptions"
+
+[sub_resource type="AnimationNodeAnimation" id=16]
+animation = "MoveOptionsToMain"
+
+[sub_resource type="AnimationNodeAnimation" id=6]
+animation = "Start"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=11]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=17]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=18]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=19]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=25]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=26]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=27]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=32]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=33]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=34]
+
+[sub_resource type="AnimationNodeStateMachine" id=4]
+states/Idle/node = SubResource( 10 )
+states/Idle/position = Vector2( 392, 107 )
+states/MoveCreditsToMain/node = SubResource( 30 )
+states/MoveCreditsToMain/position = Vector2( 697, 241 )
+states/MoveLevelsToMain/node = SubResource( 23 )
+states/MoveLevelsToMain/position = Vector2( 753, 175 )
+states/MoveMainToCredits/node = SubResource( 31 )
+states/MoveMainToCredits/position = Vector2( 392, 241 )
+states/MoveMainToLevels/node = SubResource( 24 )
+states/MoveMainToLevels/position = Vector2( 753, 73 )
+states/MoveMainToOptions/node = SubResource( 15 )
+states/MoveMainToOptions/position = Vector2( 392, 3 )
+states/MoveOptionsToMain/node = SubResource( 16 )
+states/MoveOptionsToMain/position = Vector2( 697, 3 )
+states/Start/node = SubResource( 6 )
+states/Start/position = Vector2( 207, 107 )
+transitions = [ "Start", "Idle", SubResource( 11 ), "Idle", "MoveMainToOptions", SubResource( 17 ), "MoveOptionsToMain", "Idle", SubResource( 18 ), "MoveMainToOptions", "MoveOptionsToMain", SubResource( 19 ), "Idle", "MoveMainToLevels", SubResource( 25 ), "MoveMainToLevels", "MoveLevelsToMain", SubResource( 26 ), "MoveLevelsToMain", "Idle", SubResource( 27 ), "Idle", "MoveMainToCredits", SubResource( 32 ), "MoveCreditsToMain", "Idle", SubResource( 33 ), "MoveMainToCredits", "MoveCreditsToMain", SubResource( 34 ) ]
+start_node = "Start"
+graph_offset = Vector2( -239, -36 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=5]
+
+[sub_resource type="Animation" id=9]
+resource_name = "Idle"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=29]
+resource_name = "MoveCreditsToMain"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 0.1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 324 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=22]
+resource_name = "MoveLevelsToMain"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 0.1, 1 ),
+"update": 0,
+"values": [ Vector2( 576, 0 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=28]
+resource_name = "MoveMainToCredits"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 0.1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 324 ) ]
+}
+
+[sub_resource type="Animation" id=21]
+resource_name = "MoveMainToLevels"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 0.1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 576, 0 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "MoveMainToOptions"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 0.1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -576, 0 ) ]
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "MoveOptionsToMain"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 0.1, 1 ),
+"update": 0,
+"values": [ Vector2( -576, 0 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Main/Logo:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 156.5, 70 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Main/MainButtons:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Main/Background:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Main/Background:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Camera:offset")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Main/EditorContainer/Editor:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Main/EditorContainer/Editor:self_modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "Start"
+length = 2.9
+tracks/0/type = "value"
+tracks/0/path = NodePath("Main/Logo:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 0.4, 1e-05 ),
+"update": 0,
+"values": [ Vector2( 156.5, -70 ), Vector2( 156.5, 70 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Main/MainButtons:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Main/Background:color")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 2, 2.9 ),
+"transitions": PoolRealArray( 2, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Main/Background:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 2, 2.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Main/EditorContainer/Editor:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 2, 2.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Main/EditorContainer/Editor:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 3 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 324.0, 640.0 ],
+"_edit_vertical_guides_": [ -576.0, 1152.0, 576.0 ]
+}
+
+[node name="Sound" type="Node" parent="."]
+script = ExtResource( 10 )
+
+[node name="Music" type="AudioStreamPlayer" parent="Sound"]
+stream = ExtResource( 1 )
+autoplay = true
+
+[node name="SFX" parent="Sound" instance=ExtResource( 7 )]
+folder = "res://assets/sfx/"
+sound_names = [ "click.wav" ]
+
+[node name="Main" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 13 )
+
+[node name="Logo" type="Label" parent="Main"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 156.5
+margin_top = 70.0
+margin_right = 419.501
+margin_bottom = 135.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Breathe"
+
+[node name="MainButtons" type="VBoxContainer" parent="Main"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -180.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_constants/separation = 0
+alignment = 1
+script = ExtResource( 4 )
+
+[node name="Play" type="Button" parent="Main/MainButtons"]
+margin_right = 576.0
+margin_bottom = 41.0
+text = "Play"
+
+[node name="Options" type="Button" parent="Main/MainButtons"]
+margin_top = 41.0
+margin_right = 576.0
+margin_bottom = 82.0
+text = "Options"
+
+[node name="Credits" type="Button" parent="Main/MainButtons"]
+margin_top = 82.0
+margin_right = 576.0
+margin_bottom = 123.0
+focus_mode = 1
+enabled_focus_mode = 1
+text = "Credits"
+
+[node name="HSeparator" type="HSeparator" parent="Main/MainButtons"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 123.0
+margin_right = 576.0
+margin_bottom = 150.0
+size_flags_vertical = 15
+
+[node name="Center" type="CenterContainer" parent="Main/MainButtons"]
+margin_top = 150.0
+margin_right = 576.0
+margin_bottom = 180.0
+
+[node name="Credits" parent="Main/MainButtons/Center" instance=ExtResource( 8 )]
+margin_left = 144.0
+margin_right = 431.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 0, 30 )
+text = "Created by: nickolasrm, nataliazambe, JayPOS"
+url = "https://github.com/nickolasrm-UFRRJ/Breathe"
+
+[node name="Background" type="ColorRect" parent="Main"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 1, 1, 1, 0 )
+
+[node name="EditorContainer" type="CenterContainer" parent="Main"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -41.0
+margin_right = 40.0
+
+[node name="Editor" type="Button" parent="Main/EditorContainer"]
+margin_left = 12.0
+margin_right = 28.0
+margin_bottom = 41.0
+icon = SubResource( 36 )
+flat = true
+
+[node name="Options" type="VBoxContainer" parent="."]
+anchor_left = -1.0
+anchor_bottom = 1.0
+script = ExtResource( 9 )
+
+[node name="TopMargin" type="HSeparator" parent="Options"]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 576.0
+margin_bottom = 75.0
+size_flags_vertical = 3
+
+[node name="Title" type="Label" parent="Options"]
+margin_top = 79.0
+margin_right = 576.0
+margin_bottom = 110.0
+custom_fonts/font = SubResource( 20 )
+text = "Options"
+align = 1
+
+[node name="Middle" type="HBoxContainer" parent="Options"]
+margin_top = 114.0
+margin_right = 576.0
+margin_bottom = 200.0
+
+[node name="LeftMargin" type="VSeparator" parent="Options/Middle"]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 251.0
+margin_bottom = 86.0
+size_flags_horizontal = 3
+
+[node name="Checkboxes" type="VBoxContainer" parent="Options/Middle"]
+margin_left = 255.0
+margin_right = 321.0
+margin_bottom = 86.0
+
+[node name="MusicCheck" type="CheckBox" parent="Options/Middle/Checkboxes"]
+margin_right = 66.0
+margin_bottom = 41.0
+size_flags_horizontal = 0
+pressed = true
+text = "Music"
+
+[node name="SFXCheck" type="CheckBox" parent="Options/Middle/Checkboxes"]
+margin_top = 45.0
+margin_right = 48.0
+margin_bottom = 86.0
+size_flags_horizontal = 0
+pressed = true
+text = "SFX"
+
+[node name="RightMargin" type="VSeparator" parent="Options/Middle"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 325.0
+margin_right = 576.0
+margin_bottom = 86.0
+size_flags_horizontal = 3
+
+[node name="OptionsReturn" type="Button" parent="Options"]
+margin_top = 204.0
+margin_right = 576.0
+margin_bottom = 245.0
+text = "Return"
+
+[node name="BottomMargin" type="HSeparator" parent="Options"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 249.0
+margin_right = 576.0
+margin_bottom = 324.0
+size_flags_vertical = 3
+
+[node name="LevelSelector" type="VBoxContainer" parent="."]
+anchor_left = 1.0
+anchor_right = 2.0
+anchor_bottom = 1.0
+script = ExtResource( 12 )
+
+[node name="TopMargin" type="HSeparator" parent="LevelSelector"]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 576.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 0, 30 )
+
+[node name="Title" type="Label" parent="LevelSelector"]
+margin_top = 34.0
+margin_right = 576.0
+margin_bottom = 65.0
+custom_fonts/font = SubResource( 20 )
+text = "Level"
+align = 1
+
+[node name="Padding" type="HBoxContainer" parent="LevelSelector"]
+margin_top = 69.0
+margin_right = 576.0
+margin_bottom = 245.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LeftMargin" type="VSeparator" parent="LevelSelector/Padding"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_right = 25.0
+margin_bottom = 176.0
+rect_min_size = Vector2( 25, 0 )
+size_flags_vertical = 3
+
+[node name="Scroll" type="ScrollContainer" parent="LevelSelector/Padding"]
+margin_left = 29.0
+margin_right = 547.0
+margin_bottom = 176.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+scroll_vertical_enabled = false
+
+[node name="Cards" type="HBoxContainer" parent="LevelSelector/Padding/Scroll"]
+margin_right = 518.0
+margin_bottom = 176.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="RightMargin" type="VSeparator" parent="LevelSelector/Padding"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 551.0
+margin_right = 576.0
+margin_bottom = 176.0
+rect_min_size = Vector2( 25, 0 )
+size_flags_vertical = 3
+
+[node name="LevelReturn" type="Button" parent="LevelSelector"]
+margin_top = 249.0
+margin_right = 576.0
+margin_bottom = 290.0
+text = "Return"
+
+[node name="BottomMargin" type="HSeparator" parent="LevelSelector"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 294.0
+margin_right = 576.0
+margin_bottom = 324.0
+rect_min_size = Vector2( 0, 30 )
+
+[node name="Credits" type="VBoxContainer" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 2.0
+
+[node name="TopMargin" type="HSeparator" parent="Credits"]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 576.0
+margin_bottom = 40.0
+size_flags_vertical = 3
+
+[node name="Title" type="Label" parent="Credits"]
+margin_top = 44.0
+margin_right = 576.0
+margin_bottom = 75.0
+custom_fonts/font = SubResource( 20 )
+text = "Credits"
+align = 1
+
+[node name="Middle" type="HBoxContainer" parent="Credits"]
+margin_top = 79.0
+margin_right = 576.0
+margin_bottom = 235.0
+
+[node name="LeftMargin" type="VSeparator" parent="Credits/Middle"]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 117.0
+margin_bottom = 156.0
+size_flags_horizontal = 3
+
+[node name="Names" type="VBoxContainer" parent="Credits/Middle"]
+margin_left = 121.0
+margin_right = 455.0
+margin_bottom = 156.0
+
+[node name="nickolasrm" parent="Credits/Middle/Names" instance=ExtResource( 8 )]
+margin_right = 334.0
+margin_bottom = 16.0
+text = "nickolasrm: developer"
+url = "https://github.com/nickolasrm"
+
+[node name="nataliazambe" parent="Credits/Middle/Names" instance=ExtResource( 8 )]
+margin_top = 20.0
+margin_right = 334.0
+margin_bottom = 36.0
+text = "nataliazambe: developer"
+url = "https://github.com/nataliazambe"
+
+[node name="jaypos" parent="Credits/Middle/Names" instance=ExtResource( 8 )]
+margin_top = 40.0
+margin_right = 334.0
+margin_bottom = 56.0
+text = "JayPOS: developer"
+url = "https://github.com/jaypos"
+
+[node name="godot" parent="Credits/Middle/Names" instance=ExtResource( 8 )]
+margin_top = 60.0
+margin_right = 334.0
+margin_bottom = 76.0
+text = "Godot: the best free game engine"
+url = "https://godotengine.org/"
+
+[node name="pipefrit Music remixer of Pink Floyd 8-bit songs" parent="Credits/Middle/Names" instance=ExtResource( 8 )]
+margin_top = 80.0
+margin_right = 334.0
+margin_bottom = 96.0
+text = "PipeFrit9796: Music remixer of Pink Floyd 8-bit songs"
+url = "https://youtu.be/VEKiTcFHM44?list=PLFCX0HIGorcbHomynCLte8mvxwm-W7zMa"
+
+[node name="ericfred" parent="Credits/Middle/Names" instance=ExtResource( 8 )]
+margin_top = 100.0
+margin_right = 334.0
+margin_bottom = 116.0
+text = "Eric Fredricksen: jsfx tool"
+url = "https://sfxr.me/"
+
+[node name="yt-dlp" parent="Credits/Middle/Names" instance=ExtResource( 8 )]
+margin_top = 120.0
+margin_right = 334.0
+margin_bottom = 136.0
+text = "yt-dlp: Tool to download YouTube videos"
+url = "https://github.com/yt-dlp/yt-dlp"
+
+[node name="roboyorkie-dlp2" parent="Credits/Middle/Names" instance=ExtResource( 8 )]
+margin_top = 140.0
+margin_right = 334.0
+margin_bottom = 156.0
+text = "roboyorkie: Creator of RegularPolygon addon"
+url = "https://godotengine.org/asset-library/asset/357"
+
+[node name="RightMargin" type="VSeparator" parent="Credits/Middle"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 459.0
+margin_right = 576.0
+margin_bottom = 156.0
+size_flags_horizontal = 3
+
+[node name="CreditsReturn" type="Button" parent="Credits"]
+margin_top = 239.0
+margin_right = 576.0
+margin_bottom = 280.0
+text = "Return"
+
+[node name="BottomMargin" type="HSeparator" parent="Credits"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 284.0
+margin_right = 576.0
+margin_bottom = 324.0
+size_flags_vertical = 3
+
+[node name="Camera" type="Camera2D" parent="."]
+anchor_mode = 0
+current = true
+
+[node name="Animation" type="Node" parent="."]
+script = ExtResource( 11 )
+
+[node name="AnimationTree" type="AnimationTree" parent="Animation"]
+tree_root = SubResource( 4 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource( 5 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Animation"]
+root_node = NodePath("../..")
+autoplay = "Start"
+anims/Idle = SubResource( 9 )
+anims/MoveCreditsToMain = SubResource( 29 )
+anims/MoveLevelsToMain = SubResource( 22 )
+anims/MoveMainToCredits = SubResource( 28 )
+anims/MoveMainToLevels = SubResource( 21 )
+anims/MoveMainToOptions = SubResource( 7 )
+anims/MoveOptionsToMain = SubResource( 14 )
+anims/RESET = SubResource( 3 )
+anims/Start = SubResource( 2 )
+
+[connection signal="pressed" from="Main/MainButtons/Play" to="Animation" method="_on_Play_pressed"]
+[connection signal="pressed" from="Main/MainButtons/Options" to="Animation" method="_on_Options_pressed"]
+[connection signal="pressed" from="Main/MainButtons/Credits" to="Animation" method="_on_Credits_pressed"]
+[connection signal="pressed" from="Main/EditorContainer/Editor" to="Main" method="_on_Editor_pressed"]
+[connection signal="toggled" from="Options/Middle/Checkboxes/MusicCheck" to="Options" method="_on_MusicCheck_toggled"]
+[connection signal="toggled" from="Options/Middle/Checkboxes/SFXCheck" to="Options" method="_on_SFXCheck_toggled"]
+[connection signal="pressed" from="Options/OptionsReturn" to="Animation" method="_on_OptionsReturn_pressed"]
+[connection signal="pressed" from="LevelSelector/LevelReturn" to="Animation" method="_on_LevelReturn_pressed"]
+[connection signal="pressed" from="Credits/CreditsReturn" to="Animation" method="_on_CreditsReturn_pressed"]
