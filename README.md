@@ -4,7 +4,9 @@ Dark Side of The Moon album in which gave us the colored geometric style idea
 to concept this game.
 
 ## Images
+![Game menu](https://github.com/nickolasrm-UFRRJ/Breathe/blob/main/screenshots/menu.gif?raw=true)
 
+![Gameplay](https://github.com/nickolasrm-UFRRJ/Breathe/blob/main/screenshots/gameplay.gif?raw=true)
 
 ## Mechanics
 
@@ -57,6 +59,12 @@ Check the table below for more information:
 | Heavy      | 2             | 36    | 50     | 200   |
 | Submachine | 0.2           | 36    | 1      | 300   |
 
+#### Turrets representation in the game
+Each turret card on the turrets deck contains three numbers, they are respectively:
+fire delay, damage and price.
+
+![Ranges preview](https://github.com/nickolasrm-UFRRJ/Breathe/blob/main/screenshots/ranges.gif?raw=true)
+
 ### Enemies:
 Enemies are object that move through the path from the start point to the end
 point that should be destroyed by turrets, otherwise, they can reach an
@@ -82,6 +90,7 @@ place turrets.
 In the bottom left side of the menu screen there's a brush icon, when clicked
 the player is transported to the editor.
 
+![Level creation example](https://github.com/nickolasrm-UFRRJ/Breathe/blob/main/screenshots/editor.gif?raw=true)
 
 The editor has two main screens, one for the map editing and another for the
 events (wave, stats, and shop time) sequence editing. The gif above shows an
