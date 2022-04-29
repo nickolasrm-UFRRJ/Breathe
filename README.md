@@ -20,35 +20,35 @@ A time interval in which enemies are spawned until there are no more
 enemies into the spawn queue or a shop time is reached.
 
 ### Path
-The level path is a continuous set of tiles in which enemies walk through in 
+The level path is a continuous set of tiles in which enemies walk through 
 from the starting point to the end point. If an enemy reaches the end point
-you lose a life.
+the player lose a life.
 
 ### Start point
-Start point is the entry tile of path that enemies spawn.
+Start point is the entry tile of path that enemies spawn. Represented by green.
 
 ### End point
-End point is the last tile of the path in which enemies want to reach.
+End point is the last tile of the path in which enemies want to reach. Represented by yellow.
 
 ### Block
 Blocks are red tiles in which blocks the player of putting a turret in that
 position.
 
 ### Lifes
-At the top left of the screen there are level-varying number of hearts in which
-each of them represent the number of lives you have left. If an enemy reaches
-the end point, you lost a life, and if you lost all lives, then you will be
-transported to the game over screen.
+At the top left spot of the screen there are level-specified number of hearts in which
+represent the number of lives the player have left. If an enemy reaches
+the end point, the player loses a life, and if the player loses all lives, then the scene
+will change to the game over scene.
 
 ### Coins
-At the top right of the screen there is a golden circle icon representing the
-coins. Aside of it, is the number of coins  you currently have. If the number
-of coins is >= than the turret cost, you'll be able to buy it, otherwise, not.
+At the top right spot of the screen there is a golden circle icon representing the
+coins. Aside of it, is the number of coins the player currently have. If the number
+of coins is >= than the turret price, the player will be able to buy it, otherwise, it wont.
 
 ### Turrets
-Turrets are blocks you use coins to buy and can be placed in non block and non
+Turrets are blocks the player spend coins to buy, and place into a non block and non
 path tiles if they are not occupied by another turret. Each turret is more
-appropriate for an enemy, and they vary on damage, fire delay, range, color, and price.
+appropriate for an enemy, varying on damage, fire delay, range, color, and price.
 Check the table below for more information:
 
 | Name       | Fire delay(s) | Range | Damage | Color   | Price |
@@ -66,9 +66,9 @@ fire delay, damage and price.
 ![Ranges preview](https://github.com/nickolasrm-UFRRJ/Breathe/blob/main/screenshots/ranges.gif?raw=true)
 
 ### Enemies:
-Enemies are object that move through the path from the start point to the end
-point that should be destroyed by turrets, otherwise, they can reach an
-endpoint enabling the player to lose the game. Enemies vary on speed, health,
+Enemies are objects that move through the path from the start point to the end
+point. They have to be destroyed by turrets, otherwise, they can reach an
+endpoint, enabling the player to lose the game. Enemies vary on speed, health,
 number of sides, color, and coins. Their specification is described below:
 
 | Name    | Health | Speed | Nof sides | Color  | Coins |
@@ -82,12 +82,12 @@ number of sides, color, and coins. Their specification is described below:
 ## Goal
 The main goal of this game is to find the right combination of turrets for each
 enemy. But for doing this, the player will have to plan when it is time to 
-accumulate coins to buy an expensier turret, or when it is time to buy a cheaper
+accumulate coins and buy an expensier turret, or when it is time to buy a cheaper
 turret. Aside of this, the player also have to know what are the best spots to
-place turrets.
+place turrets in order to maximize range.
 
 ## Editor
-In the bottom left side of the menu screen there's a brush icon, when clicked
+In the bottom left spot of the menu screen there's a brush icon, by clicking it,
 the player is transported to the editor.
 
 ![Level creation example](https://github.com/nickolasrm-UFRRJ/Breathe/blob/main/screenshots/editor.gif?raw=true)
