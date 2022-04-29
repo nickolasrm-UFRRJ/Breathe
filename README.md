@@ -48,16 +48,16 @@ of coins is >= than the turret cost, you'll be able to buy it, otherwise, not.
 ### Turrets
 Turrets are blocks you use coins to buy and can be placed in non block and non
 path tiles if they are not occupied by another turret. Each turret is more
-appropriate for an enemy, and they vary on damage, fire delay, range and price.
+appropriate for an enemy, and they vary on damage, fire delay, range, color, and price.
 Check the table below for more information:
 
-| Name       | Fire delay(s) | Range | Damage | Price |
-|------------|---------------|-------|--------|-------|
-| Regular    | 1             | 48    | 2      | 100   |
-| Fast       | 0.75          | 36    | 1      | 60    |
-| Ranger     | 2             | 96    | 15     | 150   |
-| Heavy      | 2             | 36    | 50     | 200   |
-| Submachine | 0.2           | 36    | 1      | 300   |
+| Name       | Fire delay(s) | Range | Damage | Color   | Price |
+|------------|---------------|-------|--------|---------|-------|
+| Regular    | 1             | 48    | 2      | Red     | 100   |
+| Fast       | 0.75          | 36    | 1      | Lime    | 60    |
+| Ranger     | 2             | 96    | 15     | Cyan    | 150   |
+| Heavy      | 2             | 36    | 50     | Purple  | 200   |
+| Submachine | 0.2           | 36    | 1      | Pink    | 300   |
 
 #### Turrets representation in the game
 Each turret card on the turrets deck contains three numbers, they are respectively:
