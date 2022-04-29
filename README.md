@@ -1,6 +1,6 @@
 # Breathe
-This project consist of a game based on Pink Floyd's songs, and mainly on The
-Dark Side of The Moon album in which gave us the colored geometric style idea
+This project consists of a game based on Pink Floyd's songs, and mainly on The
+Dark Side of The Moon album which gave us the colored geometric style idea
 to concept this game.
 
 ## Images
