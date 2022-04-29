@@ -6,7 +6,7 @@
 [ext_resource path="res://nodes/enemy/Physics.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 15, 15 )
+extents = Vector2( 13, 13 )
 
 [sub_resource type="Animation" id=2]
 length = 0.001
