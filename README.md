@@ -105,6 +105,6 @@ This game was developed in Godot 3.4.4. Check their [website](https://godotengin
 for more information.
 
 ## Authors
-* Natalia Zambe([nataliazambe](https://github.com/nataliazambe))
+* Natalia Zambe ([nataliazambe](https://github.com/nataliazambe))
 * João Pedro Ribeiro ([JayPOS](https://github.com/JayPOS))
 * Nickolas da Rocha Machado ([nickolasrm](https://github.com/nickolasrm))
