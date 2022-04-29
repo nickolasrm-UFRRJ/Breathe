@@ -38,7 +38,9 @@ _global_script_class_icons={
 
 [application]
 
-config/name="TrabalhoCG"
+config/name="Breathe"
+config/description="Breathe is a game inspired by Pink Floyd's The Dark Side of The Moon album geometric style. The game implements songs made by the band, remixed in a 8-bit like mode, and has lots of references for them  inside the game."
+run/main_scene="res://scenes/sound_enabler/SoundEnabler.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -67,6 +69,7 @@ enabled=PoolStringArray( "res://addons/Iconify/plugin.cfg", "res://addons/color-
 bloom=false
 test=false
 display=false
+"default scene"=false
 
 [input]
 
