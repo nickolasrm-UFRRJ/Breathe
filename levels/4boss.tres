@@ -29,7 +29,7 @@
   "events": [{
     "type": "enemy",
     "enemy": "boss",
-    "delay": 0
+    "delay": 0.1
   }],
   "stats": {
     "lives": 1,
